@@ -7,4 +7,4 @@ function accum(s) {
   }
     return arr.join("-");//returning string with separater
 }
-console.log(accum("abcd"))//calling a function
+console.log(accum("abcd"))//calling a functiont
