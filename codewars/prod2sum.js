@@ -25,16 +25,17 @@ function prod2sum(a, b, c, d) {
      let arr=[];
     let arr2=[];
     let results=[];
-    arr.push(((a*d)-(b*c)),((a*c)+(b*d)))
-    arr2.push(((b*d)-(a*c)) ,((a*d)+(b*c)))
-  var str1=arr.join("")
-  var str2=arr2.join("")
+    arr.push(Math.abs((a*d)-(b*c)),Math.abs((a*c)+(b*d)))
+    
+    arr2.push( Math.abs((a*d)+(b*c)),Math.abs((a*c)-(b*d)))
+  var str1=arr.sort((a,b)=>a-b).join("")
+  var str2=arr2.sort((a,b)=>a-b).join("")
   if(str1===str2){
     results.push(arr2)
   }
   else{
     results.push(arr,arr2) 
   }
- 
+ results.sort((a,b)=>a[0]-b[0]);
     return  results
 }
