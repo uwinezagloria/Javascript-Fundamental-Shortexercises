@@ -1,9 +1,9 @@
 function maxMultiple(divisor, bound){
-  let n=[];
+  let n;
   for(let i=1;i<=bound;i++){
   if(i%divisor=== 0){
-    n.push(i)
+    n=i
   }
   }
-  return Math.max(...n)
+  return n;
 }
