@@ -1,0 +1,1 @@
+const inviteMoreWomen=(L)=>(L.filter((num)=>num===1).length)>(L.filter((num)=>num===-1).length);
