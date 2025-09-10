@@ -1,0 +1,1 @@
+const highAndLow=numbers=>String(Math.max(...numbers.split(" ").map(Number)))+" " +String(Math.min(...numbers.split(" ").map(Number)))
