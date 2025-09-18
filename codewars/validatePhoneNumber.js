@@ -13,14 +13,12 @@ Examples:
 const validPhoneNumber=(phoneNumber)=> {
    let rest=phoneNumber.slice(phoneNumber.indexOf(")")+1)
   let close=phoneNumber.indexOf(")")
-  let first=phoneNumber.slice(phoneNumber.indexOf("("),phoneNumber.indexOf(phoneNumber[close+1]))
-  
   if(close===-1)return false
   if(phoneNumber[close+1]!==" ")  return false
   if(!phoneNumber.startsWith("("))return false
   if(rest.indexOf("-")===-1)return false
  let start=rest.slice(rest[0],rest.indexOf("-"))
   let end=rest.slice(rest.indexOf("-")+1)
- return  rest.length===9 &&start.length===4 && end.length===4 &&first==="(123)"?true:false
+ return  rest.length===9 &&start.length===4 && end.length===4 ?true:false
 }
 
