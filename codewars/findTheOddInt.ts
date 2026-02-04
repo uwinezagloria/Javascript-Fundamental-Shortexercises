@@ -16,4 +16,4 @@ for(let item in obj){
   }
 }
  return Number(result.join(""));
-};
+}
