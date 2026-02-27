@@ -1,10 +1,11 @@
 export function partsSums(ls: number[]): number[] {
-let array=ls;
-let result=[];
-while (array.length!==0){
-result.push(array.reduce((acc,curr)=>acc+curr,0))
-array.shift()
-}
- result.push(0)
- return result
+    let total = ls.reduce((acc, curr) => acc + curr, 0);
+    let result = [total];
+
+    for (let i = 0; i < ls.length; i++) {
+        total -= ls[i];
+        result.push(total);
+    }
+
+    return result;
 }
